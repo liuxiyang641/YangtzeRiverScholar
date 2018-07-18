@@ -19,7 +19,7 @@ class YangzeriverscholarSpider(scrapy.Spider):
         if tables is not None:
             #  此时的table1是特聘教授
             table1 = tables[0]
-            cols = len(table1.xpath('tr'))+1
+            cols = len(table1.xpath('tr')) + 1
             for col in range(2, cols):
                 scholar = YangtzeRiverScholarItem()
                 scholar['college'] = "".join(table1.xpath('tr[' + str(col) + ']/td[1]//span/text()').extract())
