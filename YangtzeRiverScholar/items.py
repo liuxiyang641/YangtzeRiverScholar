@@ -8,7 +8,10 @@
 import scrapy
 
 
-class YangtzeriverscholarItem(scrapy.Item):
+class YangtzeRiverScholarItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    name=scrapy.Field()
+    college=scrapy.Field()
+    title=scrapy.Field()
+    researchArea=scrapy.Field()
