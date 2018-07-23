@@ -22,10 +22,10 @@ class YangzeriverscholarSpider(scrapy.Spider):
             cols = len(table1.xpath('tr')) + 1
             for col in range(2, cols):
                 scholar = YangtzeRiverScholarItem()
-                scholar['college'] = "".join(table1.xpath('tr[' + str(col) + ']/td[1]//span/text()').extract())
-                scholar['name'] = "".join(table1.xpath('tr[' + str(col) + ']/td[2]//span/text()').extract())
-                scholar['researchArea'] = "".join(table1.xpath('tr[' + str(col) + ']/td[3]//span/text()').extract())
-                scholar['title'] = '长江学者特聘教授'
+                scholar['XXMC'] = "".join(table1.xpath('tr[' + str(col) + ']/td[1]//span/text()').extract())
+                scholar['XM'] = "".join(table1.xpath('tr[' + str(col) + ']/td[2]//span/text()').extract())
+                scholar['XKLB'] = "".join(table1.xpath('tr[' + str(col) + ']/td[3]//span/text()').extract())
+                scholar['LB'] = '长江特聘教授'
                 yield scholar
 
             #  此时的table2是讲座教授
@@ -33,10 +33,10 @@ class YangzeriverscholarSpider(scrapy.Spider):
             cols = len(table2.xpath('tr')) + 1
             for col in range(2, cols):
                 scholar = YangtzeRiverScholarItem()
-                scholar['college'] = "".join(table2.xpath('tr[' + str(col) + ']/td[1]//span/text()').extract())
-                scholar['name'] = "".join(table2.xpath('tr[' + str(col) + ']/td[2]//span/text()').extract())
-                scholar['researchArea'] = "".join(table2.xpath('tr[' + str(col) + ']/td[3]//span/text()').extract())
-                scholar['title'] = '长江学者讲座教授'
+                scholar['XXMC'] = "".join(table2.xpath('tr[' + str(col) + ']/td[1]//span/text()').extract())
+                scholar['XM'] = "".join(table2.xpath('tr[' + str(col) + ']/td[2]//span/text()').extract())
+                scholar['XKLB'] = "".join(table2.xpath('tr[' + str(col) + ']/td[3]//span/text()').extract())
+                scholar['LB'] = '长江讲座教授'
                 yield scholar
 
             #  此时的table3是青年学者
@@ -44,8 +44,8 @@ class YangzeriverscholarSpider(scrapy.Spider):
             cols = len(table3.xpath('tr')) + 1
             for col in range(2, cols):
                 scholar = YangtzeRiverScholarItem()
-                scholar['college'] = "".join(table3.xpath('tr[' + str(col) + ']/td[1]//span/text()').extract())
-                scholar['name'] = "".join(table3.xpath('tr[' + str(col) + ']/td[2]//span/text()').extract())
-                scholar['researchArea'] = "".join(table3.xpath('tr[' + str(col) + ']/td[3]//span/text()').extract())
-                scholar['title'] = '长江学者青年学者'
+                scholar['XXMC'] = "".join(table3.xpath('tr[' + str(col) + ']/td[1]//span/text()').extract())
+                scholar['XM'] = "".join(table3.xpath('tr[' + str(col) + ']/td[2]//span/text()').extract())
+                scholar['XKLB'] = "".join(table3.xpath('tr[' + str(col) + ']/td[3]//span/text()').extract())
+                scholar['LB'] = '长江青年学者'
                 yield scholar

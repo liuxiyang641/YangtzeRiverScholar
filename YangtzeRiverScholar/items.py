@@ -11,7 +11,7 @@ import scrapy
 class YangtzeRiverScholarItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    name=scrapy.Field()
-    college=scrapy.Field()
-    title=scrapy.Field()
-    researchArea=scrapy.Field()
+    XM=scrapy.Field()
+    XXMC=scrapy.Field()
+    LB=scrapy.Field()
+    XKLB=scrapy.Field()
