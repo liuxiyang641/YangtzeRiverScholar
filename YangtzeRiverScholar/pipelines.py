@@ -14,7 +14,7 @@ class YangtzeriverscholarPipeline(object):
         self.spacePattern = re.compile(r'\s+')
 
     def open_spider(self, spider):
-        self.file = open('../docs/YangtzeRiverScholar.csv', 'w', encoding='utf-8-sig')
+        self.file = open('../docs/YangtzeRiverScholar.csv', 'w', encoding='utf')
         header = []
         for key in YangtzeRiverScholarItem.fields:
             header.append(key)
